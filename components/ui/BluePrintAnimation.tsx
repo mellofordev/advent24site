@@ -1,5 +1,11 @@
 import { Variants, motion } from "framer-motion"
-export default function BlurPrintAnimation() {
+import { twMerge } from 'tailwind-merge'
+/**
+ * 
+ * @param width:string (width of the svg required , default 30vw) , className:string (classnames of path in the svg)
+ * 
+ */
+export default function BlurPrintAnimation({ width, className }: { width?: string, className?: string }) {
     const animation: Variants = {
         hidden: {
             pathLength: 0,
@@ -15,10 +21,10 @@ export default function BlurPrintAnimation() {
         },
     }
     return (
-        <div className={` w-[30vw] h-auto `}>
+        <div className={twMerge(` w-[30vw] h-auto `, width)}>
             <svg xmlns="http://www.w3.org/2000/svg" className={` w-full h-full `} viewBox="0 0 830 719" >
                 <motion.path
-                    className={`fill-white`}
+                    className={twMerge("fill-white", className)}
                     variants={animation}
                     initial="hidden"
                     animate="visible"
