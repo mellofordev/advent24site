@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import {motion} from 'framer-motion'
 import Footer from "@/components/FooterComponent";
 import advent_logo from '../public/svg/advent.svg';
-import advent_blueprint from '../public/svg/advent_blueprint.svg';
+import AdventBlueprint from "@/components/svg/AdventBlueprint";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -29,11 +29,7 @@ export default function Home() {
                 transition={{ ease: 'easeIn', duration: 0 }}
             >
             {/* stroke is not applied to the blueprint advent logo ! */}
-            <motion.img
-                src={advent_blueprint.src}
-                style={{ width: '568px',height: '491.365px',
-                          flexShrink: 0, objectFit: 'cover',stroke:'#000'}}
-            />
+            <AdventBlueprint svgWidth="w-full"/>
             </motion.div>
             <motion.img
                 src={advent_logo.src}

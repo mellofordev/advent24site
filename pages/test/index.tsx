@@ -1,4 +1,4 @@
-import BlurPrintAnimation from "@/components/ui/BluePrintAnimation";
+import BlurPrintAnimation from "@/components/svg/AdventBlueprint";
 
 export default function TestPage() {
     return (
