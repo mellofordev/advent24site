@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css';
 import {motion} from 'framer-motion'
 import Footer from "@/components/FooterComponent";
 import advent_logo from '../public/svg/advent.svg';
+import advent_blueprint from '../public/svg/advent_blueprint.svg';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
             initial={{ opacity: 0, transform: 'translateZ(-120px)' }}
             whileInView={{ opacity: 1, transform: 'translateZ(0px)' }}
             transition={{ ease: 'easeIn', duration: 2 }}
+            style={{position:'relative'}}
         >
             <motion.div
                 style={{ margin: 5 }}
@@ -26,10 +28,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, transform: 'scaleY(1)' }}
                 transition={{ ease: 'easeIn', duration: 0 }}
             >
+            {/* stroke is not applied to the blueprint advent logo ! */}
+            <motion.img
+                src={advent_blueprint.src}
+                style={{ width: '568px',height: '491.365px',
+                          flexShrink: 0, objectFit: 'cover',stroke:'#000'}}
+            />
             </motion.div>
             <motion.img
                 src={advent_logo.src}
-                style={{ height: 200, width: 'auto', objectFit: 'cover' }}
+                style={{ height: 200, width: 'auto', objectFit: 'cover', position: 'absolute',zIndex:100}}
                 initial={{ opacity: 0, transform: 'translateY(50px)' }}
                 whileInView={{ opacity: 1, transform: 'translateY(0px)' }}
                 transition={{ ease: 'linear', duration: 2 }}
@@ -40,34 +48,6 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             transition={{ ease: 'easeIn', duration: 1 }}
         >
-            <div className={styles.contactFlexBox}>
-                <div className={styles.shortContactViewer}>
-                    <h1 className={styles.contactmeFont}>This February</h1>
-                    <div>
-                        <div className={styles.contactContainer}>
-                            <div className={styles.contactIndividuals}>
-                                <h2 className={styles.titleFont}>16</h2>
-                            </div>
-                            <div className={styles.contactIndividuals}>
-                                <h2 className={styles.titleFont}>17</h2>
-                            </div>
-                            <div className={styles.contactIndividuals}>
-                                <h2 className={styles.titleFont}>18</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.rightContactImage}>
-                    <Image
-                        className={styles.contactImg}
-                        src="https://i.ibb.co/bmM9VqK/sst-side-pic.jpg"
-                        width={550}
-                        height={600}
-                        alt="Theyyam"
-                        style={{ borderRadius: 35 }}
-                    />
-                </div>
-            </div>
         </motion.div>
         <Footer />
     </div>
