@@ -1,0 +1,198 @@
+.container {
+    padding: 0 2rem;
+}
+
+.main {
+    min-height: 100vh;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactmeFont {
+    font-family: 'TheGoodMonolith';
+    font-size: 45px;
+    font-weight: bold;
+}
+.mainContents {
+    margin-left: 250px;
+}
+.largeViewer {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.ibb.co/9HpTBFs/background-2.webp');
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw/5;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    margin-top: 3px;
+    -webkit-mask-image: radial-gradient(89% 181% at 56% 20%, #000 16%, transparent 115%);
+}
+
+.largeViewerTop {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.viewerCentered {
+    justify-content: center;
+    align-items: center;
+}
+.shortViewer {
+    background-color: black;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contactFlexBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.shortContactViewer {
+    background-color: transparent;
+    color: white;
+    height: 60vh;
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    margin-left: 90px;
+}
+.cardViewer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.rightContactImage {
+    margin: 20px;
+    margin-right: 150px;
+    margin-top: 0px;
+}
+.textColorBlack {
+    color: black;
+}
+.textColorWhite {
+    color: azure;
+}
+.titleFont {
+    font-size: 56px;
+    font-weight: bolder;
+    font-family: 'Enhanced LED Board-7';
+    color: white;
+    overflow-wrap: break-word;
+}
+.lowerFont {
+    font-size: 24px;
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+.contactContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+}
+.awardsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.awardsContainer img {
+    border-radius: 15px;
+    height: 255px;
+    width: 255px;
+}
+.contactIndividuals {
+    margin-left: 8px;
+}
+.footerViewer {
+    background-color: rgb(27, 27, 27);
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+.titleFont {
+    animation-name: BackgroundP;
+
+    animation-duration: 3s;
+}
+@keyframes BackgroundP {
+    from {
+        transform: translateY(-22px) rotateX(180deg);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+.contactFlexBox {
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .mainContents {
+        margin-left: 0px;
+    }
+    .grid {
+        width: 100%;
+        flex-direction: column;
+    }
+    .largeViewer {
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        background-position-x: -400px;
+        margin-top: 0px;
+    }
+
+    .contactFlexBox {
+        flex-direction: column;
+    }
+    .shortContactViewer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: 6px;
+        margin-left: 0px;
+        -webkit-mask-image: radial-gradient(89% 181% at 56% 20%, #000 16%, transparent 115%);
+    }
+    .cardViewer {
+        flex-direction: column;
+        margin: 5px;
+    }
+    .rightContactImage {
+        display: none;
+    }
+    .awardsContainer {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 12px;
+    }
+    .awardsContainer img {
+        height: 155px;
+        width: 155px;
+    }
+}
