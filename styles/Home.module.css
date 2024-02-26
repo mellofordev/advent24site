@@ -25,14 +25,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('https://i.ibb.co/9HpTBFs/background-2.webp');
+    background-image: url('../public/bg_paper.jpg');
 
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     width: 100vw/5;
-    border-bottom-left-radius: 35px;
-    border-bottom-right-radius: 35px;
     margin-top: 3px;
     -webkit-mask-image: radial-gradient(89% 181% at 56% 20%, #000 16%, transparent 115%);
 }

@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import {motion} from 'framer-motion'
 import Footer from "@/components/FooterComponent";
+import advent_logo from '../public/svg/advent.svg';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -25,10 +26,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, transform: 'scaleY(1)' }}
                 transition={{ ease: 'easeIn', duration: 0 }}
             >
-              <h1>advent24</h1>
             </motion.div>
             <motion.img
-                src="https://i.ibb.co/84bZG35/sst-24-label.png"
+                src={advent_logo.src}
                 style={{ height: 200, width: 'auto', objectFit: 'cover' }}
                 initial={{ opacity: 0, transform: 'translateY(50px)' }}
                 whileInView={{ opacity: 1, transform: 'translateY(0px)' }}
