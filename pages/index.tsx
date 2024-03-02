@@ -7,6 +7,7 @@ import Footer from "@/components/FooterComponent";
 import advent_logo from "../public/svg/advent.svg";
 import AdventBlueprint from "@/components/svg/AdventBlueprint";
 import Ballon from "@/components/svg/Ballon";
+import LightHouse from "@/components/svg/LightHouse";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -16,6 +17,14 @@ export default function Home() {
         <title>advent'24</title>
       </Head>
       <div className="flex flex-col justify-items-center relative overflow-x-hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ ease: "easeIn", duration: 1 }}
+          className="absolute bottom-2.5/4 right-1/2 z-[100]"
+        >
+          <LightHouse className="w-30" />
+        </motion.div>
         <motion.div
           className={styles.largeViewer}
           initial={{ opacity: 0, transform: "translateZ(-120px)" }}
@@ -44,9 +53,7 @@ export default function Home() {
             transition={{ ease: "linear", duration: 2 }}
           />
         </motion.div>
-        <div className="flex flex-row justify-evently gap-3">
-
-        </div>
+        <div className="flex flex-row justify-evently gap-3"></div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
