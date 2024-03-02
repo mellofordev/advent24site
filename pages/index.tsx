@@ -28,8 +28,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, transform: 'scaleY(1)' }}
                 transition={{ ease: 'easeIn', duration: 0 }}
             >
-            {/* stroke is not applied to the blueprint advent logo ! */}
-            <AdventBlueprint svgWidth="w-full"/>
+            <AdventBlueprint className="w-screen"/>
             </motion.div>
             <motion.img
                 src={advent_logo.src}

@@ -6,7 +6,6 @@ import { twMerge } from 'tailwind-merge'
  * 
  */
 interface Props{
-    svgWidth?:string;
     className?:string;
 }
 export default function AdventBlueprint(props:Props) {
@@ -25,10 +24,10 @@ export default function AdventBlueprint(props:Props) {
         },
     }
     return (
-        <div className={twMerge(` w-[30vw] h-auto `, props.svgWidth)}>
+        <div className={twMerge(` w-[30vw] h-auto `,props.className)}>
             <svg xmlns="http://www.w3.org/2000/svg" className={` w-full h-full `} viewBox="0 0 830 719" >
                 <motion.path
-                    className={twMerge("fill-white", props.className)}
+                    className={twMerge("fill-[#520] stroke-black stroke-1 opacity-20")}
                     variants={animation}
                     initial="hidden"
                     animate="visible"
