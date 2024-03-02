@@ -7,6 +7,7 @@ import Footer from "@/components/FooterComponent";
 import advent_logo from "../public/svg/advent.svg";
 import AdventBlueprint from "@/components/svg/AdventBlueprint";
 import Ballon from "@/components/svg/Ballon";
+import { Button } from "@/components/ui/button";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -44,8 +45,9 @@ export default function Home() {
             transition={{ ease: "linear", duration: 2 }}
           />
         </motion.div>
-        <div className="flex flex-row justify-evently gap-3">
-
+        <div className="absolute flex flex-row justify-evently gap-5 top-2/3 left-24">
+          <Button>events</Button>
+          <Button>caw24</Button>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
