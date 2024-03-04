@@ -19,16 +19,12 @@
     margin-left: 0;
 }
 .largeViewer {
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('../public/bg_paper.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url('../public/bg_paper.jpg'), lightgray 50% / cover no-repeat;
     background-attachment: fixed;
-    -webkit-mask-image: radial-gradient(89% 181% at 56% 20%, #000 16%, transparent 115%);
 }
 
 .largeViewerTop {
