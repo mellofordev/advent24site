@@ -10,6 +10,8 @@ import Ballon from "@/components/svg/Ballon";
 import { Button } from "@/components/ui/button";
 import LightHouse from "@/components/svg/LightHouse";
 import FibonacciPattern from "@/components/svg/FibonacciPattern";
+import Advent24 from "@/components/svg/Advent24";
+import AdventBackground from "@/components/svg/AdventBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -77,7 +79,7 @@ export default function Home() {
           <p className="text-[14px] italic font-[600] uppercase ">
             The much awaited event will start in
           </p>
-          <FibonacciPattern className="m-5"/>
+          <FibonacciPattern className="m-5" />
           <div className="absolute top-2/4">
             <div className="flex flex-row justify-evently gap-3">
               <h1 className="text-[57px] text-[#562C02] font-[400]">00</h1>
@@ -88,8 +90,31 @@ export default function Home() {
           </div>
           <div className="absolute top-3/4 flex flex-col justify-center">
             <p>venue:</p>
-            <h1 className="text-[#562C02] uppercase text-[14px] font-[400]">Sree Chitra Thirunal College of Engineering</h1>
+            <h1 className="text-[#552200] uppercase text-[14px] font-[400]">
+              Sree Chitra Thirunal College of Engineering
+            </h1>
           </div>
+        </div>
+        <div className=" relative">
+          <div className=" absolute m-5 z-[150]">
+            <Advent24 />
+            <p className="m-6">
+              Advent 24, the fifth edition of SCTCE's renowned technical fest,
+              returns with excitement and innovation. This dynamic event
+              promises a blend of interdisciplinary workshops, expos,
+              competitions, and engaging talks, fostering a culture of
+              continuous learning and exploration.
+              <br></br>
+              <br></br>
+              Held alongside Cult A Way, SCTCE's cultural fest, Advent maintains
+              its distinctive techno-cultural identity, offering attendees a
+              unique experience at the intersection of technology and culture.
+              From practical workshops in biotechnology to discussions on
+              cybersecurity, Advent provides hands-on experiences tailored to
+              diverse interests and aspirations.
+            </p>
+          </div>
+          <AdventBackground className=" absolute top-1/2 z-[100]" />
         </div>
       </div>
       <Footer />
