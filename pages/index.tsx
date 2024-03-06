@@ -97,7 +97,6 @@ export default function Home() {
             </div>
             <AdventBackground className="mt-10 z-[100] w-45" />
           </div>
-          <Footer/>
         </div>
       </div>
     </div>
