@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('../public/bg_paper.jpg'), lightgray 50% / cover no-repeat;
+    background: url('../public/white_texture.jpeg'), lightgray 50% / cover no-repeat;
     background-attachment: fixed;
 }
 
