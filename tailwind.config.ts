@@ -27,6 +27,12 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        adventTextPrimary: {
+          DEFAULT: "var(--adventTextPrimary)",
+        },
+        adventTextSecondary: {
+          DEFAULT: "var(--adventTextSecondary)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

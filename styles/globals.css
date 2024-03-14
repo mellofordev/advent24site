@@ -30,7 +30,8 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
+    --adventTextPrimary:#562C02;
+    --adventTextSecondary:#CCA36F;
     --radius: 0.5rem;
   }
 

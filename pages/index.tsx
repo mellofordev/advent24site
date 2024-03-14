@@ -55,8 +55,8 @@ export default function Home() {
             whileInView={{ opacity: 1, transform: "translateY(0px)" }}
             transition={{ ease: "linear", duration: 2 }}
           >
-            <Button variant={'adventPrimary'}>brochure</Button>
-            <Button variant={'default'}>caw'24</Button>
+            <Button variant={'adventPrimary'}>Brochure</Button>
+            <Button variant={'default'}>CAW'24</Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}

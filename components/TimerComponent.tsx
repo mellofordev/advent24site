@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 export default function Timer() {
-    const counter = new Date("April 20,2024 9:30:00").getTime();
+    const counter = new Date("April 13,2024 9:30:00").getTime();
     const [day,setDay] = useState(0);
     const [hour,setHour] = useState(0);
     const [minute,setMinute] = useState(0);
