@@ -12,6 +12,7 @@ import Advent24 from "@/components/svg/Advent24";
 import AdventBackground from "@/components/svg/AdventBackground";
 import { about } from "@/lib/data/contents/about";
 import Timer from "@/components/TimerComponent";
+import FrequentAsked from "@/components/svg/FrequentAsked";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -90,12 +91,15 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative h-screen">
             <div className="absolute m-5 p-5 z-[150]">
               <Advent24 />
               <p className="mt-3 whitespace-pre-wrap">{about}</p>
             </div>
             <AdventBackground className="mt-10 z-[100] w-45" />
+            <div className="absolute right-0 top-1/2 mt-80">
+              <FrequentAsked />
+            </div>
           </div>
         </div>
       </div>
