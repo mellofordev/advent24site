@@ -49,13 +49,13 @@ export default function Home() {
             transition={{ ease: "linear", duration: 2 }}
           />
           <motion.div
-            className="absolute flex flex-row justify-evently gap-5 top-2/3 left-24"
+            className="absolute flex flex-row justify-evently gap-5 top-2/3 left-25"
             initial={{ opacity: 0, transform: "translateY(50px)" }}
             whileInView={{ opacity: 1, transform: "translateY(0px)" }}
             transition={{ ease: "linear", duration: 2 }}
           >
-            <Button>brochure</Button>
-            <Button>caw'24</Button>
+            <Button variant={'adventPrimary'}>brochure</Button>
+            <Button variant={'default'}>caw'24</Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
