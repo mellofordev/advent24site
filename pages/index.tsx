@@ -13,10 +13,21 @@ import AdventBackground from "@/components/svg/AdventBackground";
 import { about } from "@/lib/data/contents/about";
 import Timer from "@/components/TimerComponent";
 import FrequentAsked from "@/components/svg/FrequentAsked";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const faq: Array<{ question: string; answer: string }> = [
+    { question: "what is this ", answer: "this is ans" },
+    { question: "some questions ", answer: "hey what is happening" },
+    { question: "open it  ", answer: "hello " },
+  ];
   return (
     <div className="flex flex-col  bg-[#FFE0B3]">
       <Head>
@@ -99,6 +110,18 @@ export default function Home() {
             <AdventBackground className="mt-10 z-[100] w-45" />
             <div className="absolute right-0 top-1/2 mt-80">
               <FrequentAsked />
+            </div>
+            <div className="m-5">
+              {faq.map((item, index) => {
+                return (
+                  <Accordion type="single" collapsible key={index}>
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger>{item.question}</AccordionTrigger>
+                      <AccordionContent>{item.answer}</AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                );
+              })}
             </div>
           </div>
         </div>
