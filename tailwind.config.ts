@@ -33,6 +33,9 @@ const config = {
         adventTextSecondary: {
           DEFAULT: "var(--adventTextSecondary)",
         },
+        adventForeground: {
+          DEFAULT: "var(--adventForeground)",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

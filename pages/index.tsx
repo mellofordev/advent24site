@@ -24,9 +24,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const faq: Array<{ question: string; answer: string }> = [
-    { question: "what is this ", answer: "this is ans" },
-    { question: "some questions ", answer: "hey what is happening" },
-    { question: "open it  ", answer: "hello " },
+    { question: "Will stay be provided in campus ?", answer: "No,Advent is planning to be in 24hrs format" },
+    { question: "How many day?", answer: "Advent is on Arpil 13 -14" },
+    { question: "How to reach the campus ?", answer: "SCTCE is located in pappenamcode which is 5kms from TVM Central " },
   ];
   return (
     <div className="flex flex-col  bg-[#FFE0B3]">
