@@ -52,7 +52,7 @@ export default function Home() {
             whileInView={{ opacity: 1, transform: "scaleY(1)" }}
             transition={{ ease: "easeIn", duration: 0 }}
           >
-            <AdventBlueprint className="w-screen" />
+            <AdventBlueprint className="w-screen lg:h-full lg:w-full" />
           </motion.div>
           <motion.img
             src={advent_logo.src}
@@ -80,7 +80,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ ease: "easeIn", duration: 1 }}
-            className="absolute top-3/4 left-1/2"
+            className="absolute top-3/4 left-1/2 lg:left-3/4"
           >
             <Ballon className="w-30" />
           </motion.div>
@@ -88,13 +88,13 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ ease: "easeIn", duration: 1 }}
-            className="absolute top-0 right-1/2 z-[100]"
+            className="absolute top-0 right-1/2 z-[100] lg:right-3/4"
           >
             <LightHouse className="w-30" />
           </motion.div>
         </motion.div>
         <div className="flex flex-col gap-5">
-          <div className="mix-blend-darken relative flex flex-col items-center p-6 h-full text-center">
+          <div className="mix-blend-darken relative flex flex-col items-center p-6 h-full text-center lg:h-[650px]">
             <div className="flex flex-row gap-2">
               {[{time:1,text:"The much"},{time:1.3,text:"awaited"},
               {time:1.4,text:"event"},{time:1.5,text:"will start in"}].map((obj,index) => {
