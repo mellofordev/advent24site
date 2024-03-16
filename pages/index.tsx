@@ -24,18 +24,25 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const faq: Array<{ question: string; answer: string }> = [
-    { question: "Will stay be provided in campus ?", answer: "No,Advent is planning to be in 24hrs format" },
+    {
+      question: "Will stay be provided in campus ?",
+      answer: "No,Advent is planning to be in 24hrs format",
+    },
     { question: "How many day?", answer: "Advent is on Arpil 13 -14" },
-    { question: "How to reach the campus ?", answer: "SCTCE is located in pappenamcode which is 5kms from TVM Central " },
+    {
+      question: "How to reach the campus ?",
+      answer:
+        "SCTCE is located in pappenamcode which is 5kms from TVM Central ",
+    },
   ];
   return (
-    <div className="flex flex-col  bg-[#FFE0B3]">
+    <div className="flex flex-col  bg-adventForeground">
       <Head>
-        <title>advent'24</title>
+        <title>Advent'24</title>
       </Head>
       <div className="flex flex-col overflow-x-hidden">
         <motion.div
-          className="mix-blend-soft h-screen flex flex-col justify-center items-center relative bg-[url(../public/bg_paper.jpg)]"
+          className="mix-blend-soft h-screen flex flex-col justify-center items-center relative bg-[url(../public/assets/bg_paper_2.png)]"
           initial={{ opacity: 0, transform: "translateZ(-120px)" }}
           whileInView={{ opacity: 1, transform: "translateZ(0px)" }}
           transition={{ ease: "easeIn", duration: 2 }}
@@ -66,8 +73,8 @@ export default function Home() {
             whileInView={{ opacity: 1, transform: "translateY(0px)" }}
             transition={{ ease: "linear", duration: 2 }}
           >
-            <Button variant={'adventPrimary'}>Brochure</Button>
-            <Button variant={'default'}>CAW'24</Button>
+            <Button variant={"adventPrimary"}>Brochure</Button>
+            <Button variant={"default"}>CAW'24</Button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
@@ -87,10 +94,23 @@ export default function Home() {
           </motion.div>
         </motion.div>
         <div className="flex flex-col gap-5">
-          <div className="mix-blend-darken relative flex flex-col items-center p-6 h-full text-center  bg-[#FFE0B3]">
-            <p className="text-[14px] italic font-[600] uppercase ">
-              The much awaited event will start in
-            </p>
+          <div className="mix-blend-darken relative flex flex-col items-center p-6 h-full text-center">
+            <div className="flex flex-row gap-2">
+              {[{time:1,text:"The much"},{time:1.3,text:"awaited"},
+              {time:1.4,text:"event"},{time:1.5,text:"will start in"}].map((obj,index) => {
+                return (
+                  <motion.p key={index}
+                    className="text-[14px] italic font-[600] uppercase "
+                    initial={{ opacity: 0,transform:"scale(1.5);" }}
+                    whileInView={{ opacity: 1,transform:"scale(1)" }}
+                    transition={{ ease: "easeIn", duration: obj.time }}
+                  >
+                    {obj.text}
+                  </motion.p>
+                );
+              })}
+            </div>
+
             <FibonacciPattern className="m-5" />
             <div className="absolute top-2/4">
               <Timer />
@@ -123,6 +143,7 @@ export default function Home() {
                 );
               })}
             </div>
+            <Footer />
           </div>
         </div>
       </div>
