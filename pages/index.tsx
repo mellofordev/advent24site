@@ -169,15 +169,26 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-screen">
-            <div className="absolute m-5 p-5 z-[150]">
-              <Advent24 />
-              <p className="mt-3 whitespace-pre-wrap">{about}</p>
+            <div className="flex flex-col justify-center lg:flex-row lg:justify-between absolute m-5 p-5 z-[150]">
+              <Advent24 className="block w-full h-full lg:hidden" />
+              <motion.img
+                src={advent_logo.src}
+                className="w-full hidden lg:block lg:w-[230px]"
+                style={{
+                  width: "auto",
+                  objectFit: "cover",
+                  position: "absolute",
+                  zIndex: 100,
+                }}
+                initial={{ opacity: 0, transform: "translateY(50px)" }}
+                whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+                transition={{ ease: "linear", duration: 2 }}
+              />
+              <p className="mt-3 whitespace-pre-wrap lg:whitespace-normal leading-tight ml-0 text-medium lg:ml-[600px] lg:text-[28px]">{about}</p>
             </div>
-            <AdventBackground className="mt-10 z-[100] w-45" />
-            <div className="absolute right-0 top-1/2 mt-80 z-[60]">
-              <FrequentAsked />
-            </div>
-            <div className="m-5 z-[150]">
+            <AdventBackground className="mt-10 z-[100] w-45 lg:w-[400px] opacity-55" />
+            <div className="flex flex-row gap-5 lg:justify-evently lg:items-start">
+            <div className="m-5 p-6 z-[150] w-full lg:w-2/3">
               {faq.map((item, index) => {
                 return (
                   <Accordion type="single" collapsible key={index}>
@@ -188,6 +199,10 @@ export default function Home() {
                   </Accordion>
                 );
               })}
+            </div>
+            <div className="absolute right-0 top-1/2 mt-80 z-[60] lg:w-[450px] lg:h-[300px]">
+              <FrequentAsked />
+            </div>
             </div>
             <Footer />
           </div>
