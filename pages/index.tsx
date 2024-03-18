@@ -3,6 +3,7 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Footer from "@/components/FooterComponent";
 import advent_logo from "../public/svg/advent.svg";
+import advent_desktop_logo from "@/public/assets/advent_desktop_logo.png";
 import AdventBlueprint from "@/components/svg/AdventBlueprint";
 import Ballon from "@/components/svg/Ballon";
 import { Button } from "@/components/ui/button";
@@ -36,7 +37,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="flex flex-col  bg-adventForeground">
+    <div className="flex flex-col  bg-[#FFE0B3]">
       <Head>
         <title>Advent'24</title>
       </Head>
@@ -52,10 +53,11 @@ export default function Home() {
             whileInView={{ opacity: 1, transform: "scaleY(1)" }}
             transition={{ ease: "easeIn", duration: 0 }}
           >
-            <AdventBlueprint className="w-screen lg:h-full lg:w-full" />
+            <AdventBlueprint className="w-screen lg:h-[718px] lg:w-[830px] opacity-50" />
           </motion.div>
           <motion.img
             src={advent_logo.src}
+            className="block lg:hidden"
             style={{
               height: 200,
               width: "auto",
@@ -67,6 +69,45 @@ export default function Home() {
             whileInView={{ opacity: 1, transform: "translateY(0px)" }}
             transition={{ ease: "linear", duration: 2 }}
           />
+          <motion.img
+            src={advent_desktop_logo.src}
+            className="hidden lg:block"
+            style={{
+              height: 200,
+              width: "auto",
+              objectFit: "cover",
+              position: "absolute",
+              zIndex: 100,
+            }}
+            initial={{ opacity: 0, transform: "translateY(50px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "linear", duration: 2 }}
+          />
+          <motion.div
+            className="absolute flex flex-row gap-2 mt-[240px] lg:mt-[200px]"
+            initial={{ opacity: 0, transform: "translateY(50px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "linear", duration: 2 }}
+          >
+            {[
+              { time: 2, text: "Exploring" },
+              { time: 2.3, text: "the" },
+              { time: 2.4, text: "boundless" },
+              { time: 2.5, text: "horizon" },
+            ].map((obj, index) => {
+              return (
+                <motion.p
+                  key={index}
+                  className="text-[14px] italic font-[600] uppercase "
+                  initial={{ opacity: 0, transform: "scale(1.5);" }}
+                  whileInView={{ opacity: 1, transform: "scale(1)" }}
+                  transition={{ ease: "easeIn", duration: obj.time }}
+                >
+                  {obj.text}
+                </motion.p>
+              );
+            })}
+          </motion.div>
           <motion.div
             className="absolute flex flex-row justify-evently gap-5 top-2/3 left-25"
             initial={{ opacity: 0, transform: "translateY(50px)" }}
@@ -90,19 +131,24 @@ export default function Home() {
             transition={{ ease: "easeIn", duration: 1 }}
             className="absolute top-0 right-1/2 z-[100] lg:right-3/4"
           >
-            <LightHouse className="w-30" />
+            <LightHouse className="w-30 lg:w-[685px]" />
           </motion.div>
         </motion.div>
         <div className="flex flex-col gap-5">
           <div className="mix-blend-darken relative flex flex-col items-center p-6 h-full text-center lg:h-[650px]">
             <div className="flex flex-row gap-2">
-              {[{time:1,text:"The much"},{time:1.3,text:"awaited"},
-              {time:1.4,text:"event"},{time:1.5,text:"will start in"}].map((obj,index) => {
+              {[
+                { time: 1, text: "The much" },
+                { time: 1.3, text: "awaited" },
+                { time: 1.4, text: "event" },
+                { time: 1.5, text: "will start in" },
+              ].map((obj, index) => {
                 return (
-                  <motion.p key={index}
+                  <motion.p
+                    key={index}
                     className="text-[14px] italic font-[600] uppercase "
-                    initial={{ opacity: 0,transform:"scale(1.5);" }}
-                    whileInView={{ opacity: 1,transform:"scale(1)" }}
+                    initial={{ opacity: 0, transform: "scale(1.5);" }}
+                    whileInView={{ opacity: 1, transform: "scale(1)" }}
                     transition={{ ease: "easeIn", duration: obj.time }}
                   >
                     {obj.text}
@@ -128,10 +174,10 @@ export default function Home() {
               <p className="mt-3 whitespace-pre-wrap">{about}</p>
             </div>
             <AdventBackground className="mt-10 z-[100] w-45" />
-            <div className="absolute right-0 top-1/2 mt-80">
+            <div className="absolute right-0 top-1/2 mt-80 z-[60]">
               <FrequentAsked />
             </div>
-            <div className="m-5">
+            <div className="m-5 z-[150]">
               {faq.map((item, index) => {
                 return (
                   <Accordion type="single" collapsible key={index}>
