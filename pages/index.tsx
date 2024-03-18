@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Footer from "@/components/FooterComponent";
@@ -20,8 +20,9 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { twMerge } from "tailwind-merge";
 
-const inter = Inter({ subsets: ["latin"] });
+const urbanist = Urbanist({ subsets: ["latin"] });
 
 export default function Home() {
   const faq: Array<{ question: string; answer: string }> = [
@@ -37,7 +38,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="flex flex-col  bg-[#FFE0B3]">
+    <div className={twMerge("flex flex-col  bg-[#FFE0B3]",urbanist.className)} >
       <Head>
         <title>Advent'24</title>
       </Head>
